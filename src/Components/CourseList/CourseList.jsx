@@ -16,10 +16,9 @@ const CourseList = () => {
         <div className="course_container">
           {courses
             .filter(course => course.id >= 1 && course.id <= 8)
-            .map((course, index) => (
-              <Link to={`/course/${course.id}`} key={index}>
-                <Course course={course} />
-              </Link>
+            
+              .map((course, index) => (
+            <Course course={course} key={index} />
             ))
           }
         </div>

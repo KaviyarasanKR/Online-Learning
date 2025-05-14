@@ -29,6 +29,7 @@ export const coursesData = [
       name: 'FullStack development with React & NodeJS',
       price: 130,
       standard: 'Beginners to Advanced',
+      isPro: true,
       courseDetail :{
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         language: 'Language - English [Subtitle Added]',
@@ -36,6 +37,7 @@ export const coursesData = [
       },
       phase1: {
         phaseName: 'React JS Basic Concept',
+        videoUrl: 'https://www.youtube.com/watch?v=s2skans2dP4',
         phaseList: 'Introduction',
         phaseList1: 'JSX Introduction',
         phaseList2: 'Components',
@@ -44,6 +46,7 @@ export const coursesData = [
       },
       phase2: {
         phaseName: 'Hooks Introduction',
+        videoUrl: 'https://www.youtube.com/watch?v=TNhaISOUy6Q',
         phaseList: 'useState Hooks',
         phaseList1: 'useEffect Hooks',
         phaseList2: 'useRef Hooks',
@@ -52,6 +55,7 @@ export const coursesData = [
       },
       phase3: {
         phaseName: 'Introduction to React Redux',
+        videoUrl: 'https://www.youtube.com/watch?v=9boMnm5X9ak&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK',
         phaseList: 'Context API',
         phaseList1: 'React Events introduction',
         phaseList2: 'onclick capture events',
@@ -60,6 +64,7 @@ export const coursesData = [
       },
       phase4: {
         phaseName: 'Lifecycle of components',
+        videoUrl: 'https://www.youtube.com/watch?v=zvM_FUVcB-0',
         phaseList: 'Introduction to constructors',
         phaseList1: 'component DidMount',
         phaseList2: 'componentWillUnmount',
@@ -81,6 +86,7 @@ export const coursesData = [
       },
       phase1: {
         phaseName: 'Python Basics & Data Structures',
+        videoUrl: 'https://www.youtube.com/watch?v=_t2GVaQasRY&list=PLeo1K3hjS3uu_n_a__MI_KktGTLYopZ12',
         phaseList: 'Installing Python & IDEs',
         phaseList1: 'Variables and Data Types',
         phaseList2: 'Conditional Statements',
@@ -89,6 +95,7 @@ export const coursesData = [
       },
       phase2: {
         phaseName: 'Working with Data using Pandas',
+        videoUrl: 'https://www.youtube.com/watch?v=CmorAWRsCAw&list=PLeo1K3hjS3uuASpe-1LjfG5f14Bnozjwy',
         phaseList: 'Reading CSV/Excel Files',
         phaseList1: 'Data Cleaning and Preprocessing',
         phaseList2: 'Data Manipulation with Pandas',
@@ -97,6 +104,7 @@ export const coursesData = [
       },
       phase3: {
         phaseName: 'Data Visualization',
+        videoUrl: 'https://www.youtube.com/watch?v=EjiMVQibki0&list=PLZ2ps__7DhBZ12NClTmMLsnU0mF9ZUSG_',
         phaseList: 'Introduction to Matplotlib',
         phaseList1: 'Plotting Line Charts and Bar Graphs',
         phaseList2: 'Seaborn for Statistical Plots',
@@ -105,6 +113,7 @@ export const coursesData = [
       },
       phase4: {
         phaseName: 'Basic Machine Learning',
+        videoUrl: 'https://www.youtube.com/watch?v=ukzFI9rgwfU',
         phaseList: 'Intro to Scikit-learn',
         phaseList1: 'Train/Test Split',
         phaseList2: 'Linear Regression',
@@ -119,6 +128,7 @@ export const coursesData = [
       name: 'Business Analysis ',
       price: 160,
       standard: 'Beginners to Advanced',
+      isPro: true,
       courseDetail :{
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         language: 'English (US)',
@@ -126,6 +136,7 @@ export const coursesData = [
       },
       phase1: {
         phaseName: 'Introduction to Business Analysis',
+        videoUrl: 'https://www.youtube.com/watch?v=diaZdX1s5L4',
         phaseList: 'Role of a Business Analyst',
         phaseList1: 'Business Analysis Process',
         phaseList2: 'Requirements Gathering Techniques',
@@ -134,6 +145,7 @@ export const coursesData = [
       },
       phase2: {
         phaseName: 'Modeling Techniques',
+        videoUrl: 'https://www.youtube.com/watch?v=yN7ypxC7838',
         phaseList: 'Use Case Diagrams',
         phaseList1: 'Data Flow Diagrams',
         phaseList2: 'Process Modeling (BPMN)',
@@ -142,6 +154,7 @@ export const coursesData = [
       },
       phase3: {
         phaseName: 'Solution Evaluation',
+        videoUrl: 'https://www.youtube.com/watch?v=s8ZylqOTvaw',
         phaseList: 'Defining KPIs',
         phaseList1: 'Cost-Benefit Analysis',
         phaseList2: 'Risk Management',
@@ -150,6 +163,7 @@ export const coursesData = [
       },
       phase4: {
         phaseName: 'Agile & Tools',
+        videoUrl: 'https://www.youtube.com/watch?v=R74OljMnTjg',
         phaseList: 'Agile Business Analysis',
         phaseList1: 'Scrum Framework Overview',
         phaseList2: 'JIRA & Confluence Usage',
@@ -163,6 +177,7 @@ export const coursesData = [
       name: 'Ultimate Forex Trading Course',
       price: 90,
       standard: 'Beginners to Advanced',
+      isPro: true,
       courseDetail :{
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         language: 'English (US)',
@@ -170,6 +185,7 @@ export const coursesData = [
       },
       phase1: {
         phaseName: 'Introduction to Forex',
+        videoUrl: 'https://www.youtube.com/watch?v=mEyuQVy3OHc',
         phaseList: 'What is Forex Trading?',
         phaseList1: 'Major Currency Pairs',
         phaseList2: 'Understanding Pips and Lots',
@@ -178,6 +194,7 @@ export const coursesData = [
       },
       phase2: {
         phaseName: 'Technical Analysis',
+        videoUrl: 'https://www.youtube.com/watch?v=rNI166nMAFw',
         phaseList: 'Chart Types and Time Frames',
         phaseList1: 'Support and Resistance',
         phaseList2: 'Candlestick Patterns',
@@ -186,6 +203,7 @@ export const coursesData = [
       },
       phase3: {
         phaseName: 'Fundamental Analysis',
+        videoUrl: 'https://www.youtube.com/watch?v=kXYvRR7gV2E',
         phaseList: 'Economic Indicators',
         phaseList1: 'Interest Rates & Inflation',
         phaseList2: 'News Trading Strategies',
@@ -194,6 +212,7 @@ export const coursesData = [
       },
       phase4: {
         phaseName: 'Risk Management & Strategy',
+        videoUrl: 'https://www.youtube.com/watch?v=LJFZ_Y8EpmA&t=43s',
         phaseList: 'Leverage and Margin',
         phaseList1: 'Stop Loss & Take Profit',
         phaseList2: 'Position Sizing',
@@ -214,6 +233,7 @@ export const coursesData = [
       },
       phase1: {
         phaseName: 'AI Fundamentals',
+        videoUrl: 'https://www.youtube.com/watch?v=ad79nYk2keg',
         phaseList: 'History of AI',
         phaseList1: 'Branches of AI',
         phaseList2: 'Applications of AI',
@@ -222,6 +242,7 @@ export const coursesData = [
       },
       phase2: {
         phaseName: 'Machine Learning Basics',
+        videoUrl: 'https://www.youtube.com/watch?v=ukzFI9rgwfU&t=2s',
         phaseList: 'Types of Machine Learning',
         phaseList1: 'Supervised vs Unsupervised Learning',
         phaseList2: 'Classification vs Regression',
@@ -230,6 +251,7 @@ export const coursesData = [
       },
       phase3: {
         phaseName: 'Working with AI Tools',
+        videoUrl: 'https://www.youtube.com/watch?v=4uvX6dxD6QA',
         phaseList: 'Introduction to Python for AI',
         phaseList1: 'Using Scikit-learn',
         phaseList2: 'Building a Basic Model',
@@ -238,6 +260,7 @@ export const coursesData = [
       },
       phase4: {
         phaseName: 'Neural Networks & Deep Learning',
+        videoUrl: 'https://www.youtube.com/watch?v=bfmFfD2RIcg',
         phaseList: 'Basics of Neural Networks',
         phaseList1: 'Activation Functions',
         phaseList2: 'Forward & Back Propagation',
@@ -259,6 +282,7 @@ export const coursesData = [
       },
       phase1: {
         phaseName: 'Project Management Basics',
+        videoUrl: 'https://www.youtube.com/watch?v=XuyCeYYod_s',
         phaseList: 'What is Project Management?',
         phaseList1: 'The Role of a Project Manager',
         phaseList2: 'Project Life Cycle',
@@ -267,6 +291,7 @@ export const coursesData = [
       },
       phase2: {
         phaseName: 'Planning & Execution',
+        videoUrl: 'https://www.youtube.com/watch?v=kTHBMunWD8M',
         phaseList: 'Work Breakdown Structure',
         phaseList1: 'Gantt Charts & Scheduling',
         phaseList2: 'Resource Allocation',
@@ -275,6 +300,7 @@ export const coursesData = [
       },
       phase3: {
         phaseName: 'Monitoring & Controlling',
+        videoUrl: 'https://www.youtube.com/watch?v=QLCHxvyx8ZA',
         phaseList: 'Key Performance Indicators',
         phaseList1: 'Earned Value Management',
         phaseList2: 'Change Management',
@@ -283,6 +309,7 @@ export const coursesData = [
       },
       phase4: {
         phaseName: 'Agile & Certification',
+        videoUrl: 'https://www.youtube.com/watch?v=xVxAQMSTJI8',
         phaseList: 'Agile vs Waterfall',
         phaseList1: 'Scrum Roles & Ceremonies',
         phaseList2: 'PMI Certifications Overview',
@@ -297,6 +324,7 @@ export const coursesData = [
       name: 'ISC2 Cyber Security',
       price: 110,
       standard: 'Beginners to Advanced',
+      isPro: true,
       courseDetail :{
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
         language: 'English (US)',
@@ -304,6 +332,7 @@ export const coursesData = [
       },
       phase1: {
         phaseName: 'Cyber Security Essentials',
+        videoUrl: 'https://www.youtube.com/watch?v=DdUwLCkbETg&list=PLmi6GtTayDkc-fjF1_PmwMQqNMzVDMmje',
         phaseList: 'CIA Triad Overview',
         phaseList1: 'Common Threats & Vulnerabilities',
         phaseList2: 'Malware Types',
@@ -312,6 +341,7 @@ export const coursesData = [
       },
       phase2: {
         phaseName: 'Network Security',
+        videoUrl: 'https://www.youtube.com/watch?v=NQ1cvwEvh44',
         phaseList: 'Firewalls and IDS/IPS',
         phaseList1: 'VPNs and Tunneling Protocols',
         phaseList2: 'Network Topologies',
@@ -320,6 +350,7 @@ export const coursesData = [
       },
       phase3: {
         phaseName: 'Application and Data Security',
+        videoUrl: 'https://www.youtube.com/watch?v=Dp019cWu1cg',
         phaseList: 'Secure Coding Practices',
         phaseList1: 'Database Security Basics',
         phaseList2: 'OWASP Top 10',
@@ -328,6 +359,7 @@ export const coursesData = [
       },
       phase4: {
         phaseName: 'Governance and Compliance',
+        videoUrl: 'https://www.youtube.com/watch?v=F3TGcQWCH1g',
         phaseList: 'Risk Assessment',
         phaseList1: 'Security Policies',
         phaseList2: 'Incident Response',
@@ -386,6 +418,7 @@ export const coursesData = [
     name: 'FullStack development with React & NodeJS',
     price: 130,
     standard: 'Beginners to Advanced',
+    isPro: true,
     courseDetail: {
       description: 'Comprehensive fullstack web dev using React and Node.',
       language: 'Language - English [Subtitle Added]',
@@ -474,6 +507,7 @@ export const coursesData = [
     name: 'Backend Development with Node.js & Express',
     price: 150,
     standard: 'Beginners to Advanced',
+    isPro:true,
     courseDetail: {
       description: 'Master backend APIs with Node.js and Express, from fundamentals to production deployment.',
       language: 'Language - English [Subtitle Added]',
@@ -518,6 +552,7 @@ export const coursesData = [
     name: 'Python for Web Development',
     price: 140,
     standard: 'Beginners to Advanced',
+    
     courseDetail: {
       description: 'Build modern web apps using Python, Flask, and Django.',
       language: 'Language - English [Subtitle Added]',
@@ -562,6 +597,7 @@ export const coursesData = [
     name: 'Cross-platform App Development with Flutter',
     price: 160,
     standard: 'Beginners to Intermediate',
+    isPro: true,
     courseDetail: {
       description: 'Develop beautiful apps for iOS and Android using Flutter and Dart.',
       language: 'Language - English [Subtitle Added]',
@@ -694,6 +730,7 @@ export const coursesData = [
     name: 'DevOps Fundamentals',
     price: 170,
     standard: 'Beginners to Advanced',
+    isPro: true,
     courseDetail: {
       description: 'Learn modern DevOps practices including CI/CD, Docker, Kubernetes, and monitoring tools.',
       language: 'Language - English [Subtitle Added]',
@@ -745,7 +782,7 @@ export const coursesData = [
     },
     phase1: {
       phaseName: 'Basics',
-      videoUrl: 'https://www.youtube.com/watch?v=VIDEO_ID',
+      videoUrl: 'https://www.youtube.com/watch?v=ULGILG-ZhO0',
       phaseList: 'Intro to Cybersecurity',
       phaseList1: 'CIA Triad',
       phaseList2: 'Security Policies',
@@ -754,6 +791,7 @@ export const coursesData = [
     },
     phase2: {
       phaseName: 'Tools & Techniques',
+      videoUrl: 'https://www.youtube.com/watch?v=SW6AE76Pi50',
       phaseList: 'Kali Linux Setup',
       phaseList1: 'Nmap & Wireshark',
       phaseList2: 'Metasploit Basics',
@@ -762,6 +800,7 @@ export const coursesData = [
     },
     phase3: {
       phaseName: 'Secure Development',
+      videoUrl: 'https://www.youtube.com/watch?v=WyWSgVE9lkA&list=PLsJsyE4MbtirylE20BleoselngG72UsyV',
       phaseList: 'OWASP Top 10',
       phaseList1: 'Input Validation',
       phaseList2: 'Authentication & Sessions',
@@ -770,16 +809,14 @@ export const coursesData = [
     },
     phase4: {
       phaseName: 'Incident Response',
+      videoUrl: 'https://www.youtube.com/watch?v=MsGl6lX-YaI',
       phaseList: 'Log Analysis',
       phaseList1: 'SIEM Tools Overview',
       phaseList2: 'Threat Modeling',
       phaseList3: 'Disaster Recovery',
       phaseList4: 'Cybersecurity Career Path',
     },
-    relatedVideos: [
-      { title: 'Intro to Cybersecurity', url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ' },
-      { title: 'Kali Linux Setup Tutorial', url: 'https://www.youtube.com/watch?v=Zz8ZjFG5DF0' },
-    ],
+    
   },
   {
     id: 26,

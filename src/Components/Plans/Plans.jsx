@@ -1,6 +1,6 @@
 import React from 'react';
-import './plans.css';
-import GooglePayButton from '@google-pay/button-react';
+import './Plans.css';
+import { useNavigate } from 'react-router-dom';
 
 const plans = [
   {
@@ -10,7 +10,7 @@ const plans = [
     price: '₹850 per month',
     billingNote: 'Billed monthly or annually. Cancel anytime.',
     button: 'Start subscription',
-    totalPrice: '850.00',
+    totalPrice: '1039.00',
     features: [
       'Access to 12,000+ top courses',
       'Certification prep',
@@ -40,7 +40,7 @@ const plans = [
     users: 'More than 20 people',
     price: 'Contact sales for pricing',
     billingNote: '',
-    button: 'Request a demo',
+    button: 'Start Free Trail',
     features: [
       'Access to 27,000+ top courses',
       'Certification prep',
@@ -57,6 +57,12 @@ const plans = [
 ];
 
 const Plans = () => {
+  const navigate = useNavigate();
+
+  const handleSubscribe = (planType) => {
+    navigate('/checkout', { state: { plan: planType } });
+  };
+
   return (
     <div className="plans-section">
       <h1>Choose a plan for success</h1>
@@ -64,6 +70,7 @@ const Plans = () => {
         Don't want to buy courses one by one? Pick a plan to help you, your team, or your
         organization achieve outcomes faster.
       </p>
+
       <div className="plan-cards">
         {plans.map((plan, index) => (
           <div key={index} className="plan-card">
@@ -72,51 +79,18 @@ const Plans = () => {
             <p className="users">{plan.users}</p>
             <h4>{plan.price}</h4>
             {plan.billingNote && <p className="billing-note">{plan.billingNote}</p>}
-            <button className="plan-button">{plan.button}</button>
 
-            {(plan.title === 'Personal Plan' || plan.title === 'Team Plan') && (
-              <div className="google-pay-button-wrapper">
-                <GooglePayButton
-                  environment="TEST"
-                  buttonSizeMode="fill"
-                  paymentRequest={{
-                    apiVersion: 2,
-                    apiVersionMinor: 0,
-                    allowedPaymentMethods: [
-                      {
-                        type: 'CARD',
-                        parameters: {
-                          allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-                          allowedCardNetworks: ['MASTERCARD', 'VISA'],
-                        },
-                        tokenizationSpecification: {
-                          type: 'PAYMENT_GATEWAY',
-                          parameters: {
-                            gateway: 'example',
-                            gatewayMerchantId: 'exampleGatewayMerchantId',
-                          },
-                        },
-                      },
-                    ],
-                    merchantInfo: {
-                      merchantId: '17613812255336763067',
-                      merchantName: 'Demo only (you will not be charged !!)',
-                    },
-                    transactionInfo: {
-                      totalPriceStatus: 'FINAL',
-                      totalPriceLabel: 'Total',
-                      totalPrice: plan.totalPrice,
-                      currencyCode: 'INR',
-                      countryCode: 'IN',
-                    },
-                  }}
-                  onLoadPaymentData={(paymentData) => {
-                    console.log('TODO: send order to server', paymentData.paymentMethodData);
-                    // If using React Router v6, replace below with navigate('/confirm');
-                    // Example: const navigate = useNavigate(); navigate('/confirm');
-                  }}
-                />
-              </div>
+            {plan.title === 'Enterprise Plan' ? (
+              <button className="plan-button">{plan.button}</button>
+            ) : (
+              <button
+                className="plan-button"
+                onClick={() =>
+                  handleSubscribe(plan.title === 'Team Plan' ? 'team' : 'personal')
+                }
+              >
+                {plan.button}
+              </button>
             )}
 
             <ul>
@@ -132,3 +106,8 @@ const Plans = () => {
 };
 
 export default Plans;
+
+
+
+
+

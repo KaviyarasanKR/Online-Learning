@@ -1,6 +1,6 @@
 import React from 'react'
 import './Hero.css'
-import classroom from '../../assets/class.jpg'
+import classroom from '../../assets/class3.webp'
 import { Link } from 'react-router-dom'
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
           Personalized learning experiences designed to help you achieve your professional
           and <br />personal goals.Gain the skills to excel in today's fast-paced world.
         </p>
-         <Link to={`/navcourses`}><div className="btn">
+         <Link to={`/login`}><div className="btn">
           <button className="cta_button">
            Explore Courses
           </button>

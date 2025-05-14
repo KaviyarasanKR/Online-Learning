@@ -12,4 +12,4 @@ const [courses,setCourses]= useState(coursesData);
   )
 }
 
-export default CourseContextProvider
+export default CourseContextProvider;

@@ -1,69 +1,144 @@
-.course_wrapper{
-    width: 100%;
-    display: grid;
-    background-color: rgb(245, 245, 255);
+/* Admin.css */
+
+body {
+  margin: 0;
+  background-color: rgb(245, 245, 255); /* Changed to rgb(245, 245, 255) */
+  font-family: 'Poppins', sans-serif;
 }
-.course_wrapper h2{
-    margin-top: 50px;
-    margin-bottom: 25px;
-    margin-left: 90px;
-    font-size: 35px;
+
+.admin-form {
+  max-width: 550px;
+  margin: 60px auto;
+  padding: 35px 30px;
+  background-color: rgb(245, 245, 255); /* Changed to rgb(245, 245, 255) */
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  color: #000; /* Black text for contrast */
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #bbb;
 }
-.course_wrapper h2 span{
-    color: rgb(59, 59, 223);
+
+.admin-form h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #000; /* Black text */
+  letter-spacing: 1px;
 }
-.course_container{
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    justify-content: center;
-    gap: 2.5rem;
+
+.admin-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 1px solid #bbb; /* Light border color */
+  border-radius: 10px;
+  background-color: rgb(245, 245, 255); /* Changed to rgb(245, 245, 255) */
+  color: #000; /* Black text */
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
 }
-.course_card{
-    position: relative;
-    background-color: #fff;
-    padding: 2rem 0;
-    border: 1px solid hsl(0, 0%, 94%);
-    text-align: center;
-    transition:.3s ;
+
+.admin-form input:focus {
+  background-color: rgb(235, 235, 255); /* Slightly darker shade for focus */
+  box-shadow: 0 0 0 2px rgba(0, 198, 255, 0.4);
 }
-.course_card:hover{
-    box-shadow: 0 8px 32px hsla(0, 0%, 10%, .1);
+
+.admin-form input::placeholder {
+  color: #666; /* Dark gray for placeholders */
 }
-.course_img{
-    height: 125px;
-    margin-bottom: 1rem;
+
+.admin-form label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #000; /* Black text for labels */
+  margin-bottom: 18px;
+  cursor: pointer;
 }
-.course_name, .course_price, .course_standard{
-    text-align: start;
-    margin-left: 10px;
+
+.admin-form label input[type="checkbox"] {
+  display: none;
 }
-.course_name{
-    margin-bottom: .5rem;
+
+.admin-form label .switch {
+  width: 46px;
+  height: 24px;
+  background-color: rgb(245, 245, 255); /* Changed to rgb(245, 245, 255) */
+  border-radius: 20px;
+  position: relative;
+  transition: background 0.3s ease;
 }
-.course_price{
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 22px;
-    font-weight: 600;
-    color: rgb(59, 59, 223);
+
+.admin-form label .switch::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #000; /* Black button */
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
 }
-.course_standard{
-    font-size: 16px;
-    color: #8d8c8c;
+
+.admin-form label input[type="checkbox"]:checked + .switch {
+  background-color: #ddd; /* Light gray for checked state */
 }
-.course_standard .analytic{
-    font-size: 18px;
-    color: black;
-    margin-right: 5px;
+
+.admin-form label input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(22px);
 }
-.course_button{
-    display: inline-block;
-    border: none;
-    border-radius: 30px;
-    color: white;
-    padding: .5rem 1.8rem;
-    font-size: 16px;
-    margin-top: 20px;
-    transition: .3s;
-    background-color: #0041C2;
+
+.admin-form button[type="submit"],
+.admin-form button[type="button"] {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.admin-form button[type="submit"] {
+  background-color: #0072ff; /* Blue button */
+}
+
+.admin-form button[type="button"] {
+  background-color: #43e97b; /* Green button */
+  margin-bottom: 10px;
+}
+
+.admin-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+
+@media (max-width: 600px) {
+  .admin-form {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .admin-form h2 {
+    font-size: 24px;
+  }
+}
+.course_badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red; /* Blue badge background */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
 }

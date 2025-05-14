@@ -1,0 +1,102 @@
+.progress-page {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.search-input {
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.progress-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.user-progress-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.user-progress-card h3 {
+  margin: 0.5rem 0;
+}
+
+.user-id {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+  border: 2px solid #ddd;
+}
+
+.user-action-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.user-action-button:hover {
+  background-color: #0056b3;
+}
+
+.progress-summary {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.progress-bar-wrapper {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+  margin: 0.4rem 0;
+}
+
+.progress-bar {
+  background-color: #4caf50;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+.progress-page h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.progress-page h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}

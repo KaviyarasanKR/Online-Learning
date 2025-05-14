@@ -16,7 +16,9 @@ const Navbar = () => {
         </Link>
         <div className="links">
           <ul>
-            <Link to={`/navcourses`}>
+            <Link to={`/`}>
+            <li>Home</li></Link>
+            <Link to={`/login`}>
             <li>Courses</li></Link>
             <Link to={`/plans`}><li>Plans & Pricing</li></Link>
             <a href="https://www.programiz.com/c-programming/online-compiler/" target="_blank" rel="noopener noreferrer">
@@ -28,10 +30,9 @@ const Navbar = () => {
         </div>
         <div className="nav_button">
         <Link to={`/login`} >
-        <button>login</button> </Link>
-        <Link to={`/register`} >
-        <button>Register</button>
-        </Link>
+        <button>Sign Up</button> </Link>
+        
+        
         </div>
       </div>
     </nav>

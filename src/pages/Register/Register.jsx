@@ -1,134 +1,160 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Register = () => {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  });
-
+const AuthPage = () => {
+  const [isLogin, setIsLogin] = useState(true);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    });
-  };
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError('');
-    setSuccess('');
 
-    // Simple validation
-    if (!form.name || !form.email || !form.password || !form.confirmPassword) {
-      setError('All fields are required');
+    if (!email || !password) {
+      setError('❗ Please enter both email and password');
       return;
     }
 
-    if (form.password !== form.confirmPassword) {
-      setError('Passwords do not match');
-      return;
+    if (isLogin) {
+      if (email === 'admin@example.com' && password === 'password123') {
+        setError('');
+        setIsAuthenticated(true);
+      } else {
+        setError('❌ Invalid login credentials');
+      }
+    } else {
+      setError('');
+      setIsAuthenticated(true);
     }
-
-    // Simulate successful registration
-    setSuccess('Registration successful!');
-    setForm({
-      name: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    });
   };
 
   return (
-    <div style={styles.container}>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <h2>Register</h2>
+    <div style={styles.wrapper}>
+      <form onSubmit={handleSubmit} style={styles.card}>
+        <h2 style={styles.heading}>{isLogin ? '🔐 Login' : '📝 Register'}</h2>
+
         {error && <p style={styles.error}>{error}</p>}
-        {success && <p style={styles.success}>{success}</p>}
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={form.name}
-          onChange={handleChange}
-          style={styles.input}
-        />
+
         <input
           type="email"
-          name="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
+          placeholder="📧 Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           style={styles.input}
+          disabled={isAuthenticated}
         />
+
         <input
           type="password"
-          name="password"
-          placeholder="Password"
-          value={form.password}
-          onChange={handleChange}
+          placeholder="🔑 Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           style={styles.input}
+          disabled={isAuthenticated}
         />
-        <input
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirm Password"
-          value={form.confirmPassword}
-          onChange={handleChange}
-          style={styles.input}
-        />
-        <button type="submit" style={styles.button}>Register</button>
+
+        {!isAuthenticated && (
+          <>
+            <button type="submit" style={styles.button}>
+              {isLogin ? 'Login' : 'Register'}
+            </button>
+            <p style={styles.toggleText}>
+              {isLogin ? 'Don\'t have an account?' : 'Already have an account?'}{' '}
+              <span onClick={() => setIsLogin(!isLogin)} style={styles.toggleLink}>
+                {isLogin ? 'Register here' : 'Login here'}
+              </span>
+            </p>
+          </>
+        )}
+
+        {isAuthenticated && (
+          <div>
+            <p style={styles.welcome}>🎉 Welcome, {email}!</p>
+            <button onClick={() => navigate('/navcourses')} style={styles.button}>
+              Go to Courses
+            </button>
+          </div>
+        )}
       </form>
     </div>
   );
 };
 
 const styles = {
-  container: {
-    display: 'flex',
+  wrapper: {
     height: '100vh',
-    justifyContent: 'center',
+    display: 'flex',
     alignItems: 'center',
-    backgroundColor: '#f4f4f4'
+    justifyContent: 'center',
+    background: 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)',
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   },
-  form: {
-    padding: 30,
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+  card: {
+    background: 'rgba(30, 30, 30, 0.85)',
+    backdropFilter: 'blur(12px)',
+    WebkitBackdropFilter: 'blur(12px)',
+    padding: 40,
+    borderRadius: 18,
+    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5)',
+    width: 360,
     display: 'flex',
     flexDirection: 'column',
-    gap: 15,
-    width: 320
+    gap: 20,
+    color: '#f1f1f1',
+    animation: 'fadeIn 0.6s ease-in-out',
+  },
+  heading: {
+    textAlign: 'center',
+    fontSize: 28,
+    fontWeight: 600,
+    marginBottom: 10,
   },
   input: {
-    padding: 10,
+    padding: 14,
     fontSize: 16,
-    border: '1px solid #ccc',
-    borderRadius: 4
+    border: '1px solid rgba(255, 255, 255, 0.2)',
+    borderRadius: 10,
+    outline: 'none',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    color: '#f9f9f9',
+    transition: 'all 0.3s ease',
   },
   button: {
-    padding: 10,
+    padding: 14,
     fontSize: 16,
-    backgroundColor: '#28a745',
+    background: 'linear-gradient(135deg, #00c6ff, #0072ff)',
     color: '#fff',
+    fontWeight: 600,
     border: 'none',
-    borderRadius: 4,
-    cursor: 'pointer'
+    borderRadius: 10,
+    cursor: 'pointer',
+    transition: 'background 0.3s ease',
   },
   error: {
-    color: 'red',
-    fontSize: 14
+    color: '#ff6b6b',
+    fontSize: 14,
+    textAlign: 'center',
   },
-  success: {
-    color: 'green',
-    fontSize: 14
-  }
+  toggleText: {
+    textAlign: 'center',
+    fontSize: 14,
+    marginTop: 10,
+    color: '#ccc',
+  },
+  toggleLink: {
+    color: '#f9d342',
+    cursor: 'pointer',
+    textDecoration: 'underline',
+    marginLeft: 5,
+  },
+  welcome: {
+    textAlign: 'center',
+    fontSize: 18,
+    color: '#90ee90',
+    fontWeight: 'bold',
+  },
 };
 
-export default Register;
+export default AuthPage;

@@ -5,6 +5,8 @@ import Detail from '../../Components/Detail/Detail'
 import CourseList from '../../Components/CourseList/CourseList'
 import Info from '../../Components/Info/Info'
 import CourseDetails from '../Courses/CourseDetails'
+import Footer from '../../Components/Footer/Footer';
+
 
 const Home = () => {
   return (
@@ -13,7 +15,7 @@ const Home = () => {
       <Trusted />
       <Detail />
       <CourseList />
-     <Info />
+       <Info />
     </div> 
   )
 }
