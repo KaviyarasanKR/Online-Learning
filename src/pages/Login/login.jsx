@@ -95,11 +95,11 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)',
+   // background: 'linear-gradient(135deg, #0f2027, #203a43, #2c5364)',
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   },
   card: {
-    background: 'rgba(30, 30, 30, 0.85)',
+    background:'#fff',
     backdropFilter: 'blur(12px)',
     WebkitBackdropFilter: 'blur(12px)',
     padding: 40,
@@ -109,7 +109,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     gap: 20,
-    color: '#f1f1f1',
+    color: 'black',
     animation: 'fadeIn 0.6s ease-in-out',
   },
   heading: {
@@ -121,11 +121,11 @@ const styles = {
   input: {
     padding: 14,
     fontSize: 16,
-    border: '1px solid rgba(255, 255, 255, 0.2)',
+    border: '1px solid rgba(0, 0, 0, 0.2)',
     borderRadius: 10,
     outline: 'none',
     backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    color: '#f9f9f9',
+    //color: 'black',
     transition: 'all 0.3s ease',
   },
   button: {
